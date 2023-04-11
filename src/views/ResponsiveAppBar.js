@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "inherit",
-                textDecoration: "none"
+                textDecoration: "none",
               }}
             >
               Mon Appli
@@ -80,32 +80,27 @@ function ResponsiveAppBar() {
               anchorEl={anchorElNav} // position du menu
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left"
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "left"
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)} // affiché / caché en fonction du state
               onClose={handleCloseNavMenu} // fonction exécutée quand on ferme le menu
               sx={{
-                display: { xs: "block", md: "none" }
+                display: { xs: "block", md: "none" },
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
-                <Link to={"/produit"}>
-                  <Typography textAlign="center">Produits</Typography>
+                <Link to={"/tournois"}>
+                  <Typography textAlign="center">Tournois</Typography>
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-                <Link to={"/prix"}>
-                  <Typography textAlign="center">Prix</Typography>
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Link to={"/produit"}>
-                  <Typography textAlign="center">Dispo</Typography>
+                <Link to={"/equipe"}>
+                  <Typography textAlign="center">Equipes</Typography>
                 </Link>
               </MenuItem>
             </Menu>
@@ -126,36 +121,28 @@ function ResponsiveAppBar() {
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
-              textDecoration: "none"
+              textDecoration: "none",
             }}
           >
-            Mon appli
+            YuYu
           </Typography>
           {/* ==========  menu de gauche mais affiché dans la navbar
              si la taille de l'écran est assez grande = md */}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <Link to={"/produit"}>
+            <Link to={"/tournois"}>
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                Produits
+                Tournois
               </Button>
             </Link>
-            <Link to={"/prix"}>
+            <Link to={"/equipe"}>
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                Prix
-              </Button>
-            </Link>
-            <Link to={"/dispo"}>
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                Dispo
+                Equipes
               </Button>
             </Link>
           </Box>
@@ -177,12 +164,12 @@ function ResponsiveAppBar() {
               anchorEl={anchorElUser}
               anchorOrigin={{
                 vertical: "top",
-                horizontal: "right"
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "right"
+                horizontal: "right",
               }}
               open={Boolean(anchorElUser)} // position du menu
               onClose={handleCloseUserMenu} // action si fermeture du menu
@@ -203,13 +190,8 @@ function ResponsiveAppBar() {
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseUserMenu}>
-                <Link to={"/account"}>
-                  <Typography textAlign="center">Account</Typography>
-                </Link>
-              </MenuItem>
-              <MenuItem onClick={handleCloseUserMenu}>
-                <Link to={"/dashboard"}>
-                  <Typography textAlign="center">Dashboard</Typography>
+                <Link to={"/monequipe"}>
+                  <Typography textAlign="center">Mon equipe</Typography>
                 </Link>
               </MenuItem>
               <MenuItem onClick={handleCloseUserMenu}>
