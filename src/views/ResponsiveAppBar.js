@@ -124,7 +124,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            YuYu
+            YuYuYu
           </Typography>
           {/* ==========  menu de gauche mais affiché dans la navbar
              si la taille de l'écran est assez grande = md */}
